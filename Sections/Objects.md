@@ -51,10 +51,10 @@ The Card object represents a Credit Card or eCheck of a customer.
 | CardName        | String | Type of credit card: ``Visa``, ``Mastercard``, ``Discover``, etc. Only valid for credit cards. | 
 | IsDefaultCard   | Boolean | Indicates whether this is the primary card of the customer. Default value is ``False``. |  
 | IsLocked        | Boolean | Indicates whether the card is locked. Default value is ``False``.|  
-| IsSaveCard      | Boolean | Indicates whether to save this card in the customer's wallet. This attribute is only valid and should only be included in the object when using [Create and Submit a Transaction by Transaction Object](https://github.com/PayFabric/APIs/wiki/API-Reference#create-and-submit-a-transaction-by-transaction-object). |  
+| IsSaveCard      | Boolean | Indicates whether to save this card in the customer's wallet. This attribute is only valid and should only be included in the object when using [Create and Process a Transaction](Transactions.md#create-and-process-a-transaction). |  
 | ModifiedOn      | Date | Timestamp indicating when this record was last modified. |  
-| CardHolder*      | [Object](https://github.com/PayFabric/APIs/wiki/API-Objects#cardholder) | Cardholder object. |  
-| Billto          | [Object](https://github.com/PayFabric/APIs/wiki/API-Objects#address) | Address object. The required rule of address object will apply once if it is not NULL.| 
+| CardHolder*      | [Object](#cardholder) | Cardholder object. |  
+| Billto          | [Object](#address) | Address object. The required rule of address object will apply once if it is not NULL.| 
 | Identifier      | String | A client-defined identifier for this card. |  
 | UserDefined1    | String | User-defined field 1 |  
 | UserDefined2    | String | User-defined field 2 |  
@@ -102,7 +102,7 @@ The Document object is used to represent additional invoice, order, or other Lev
 | UserDefined     | String | Up to 50 key value pairs can be stored in this object.| 
 
 ### Related Reading
-* [Level 2 and Level 3 Fields](https://github.com/PayFabric/APIs/wiki/Level-2-and-Level-3-Fields)
+* [Level 2 and Level 3 Fields](Level%202%20and%20Level%203%20Fields.md)
 
 ## Transaction
 The Transaction object represents a single transaction that will pass through PayFabric and be submitted to a Payment Gateway. It is probably the most important and most common object.
@@ -113,19 +113,19 @@ The Transaction object represents a single transaction that will pass through Pa
 | Amount*         | Float| Transaction amount |
 | Customer*       | String | Customer ID |  
 | Currency*       | String | Currency code, such as ``USD``. |  
-| Card*  | [Object](https://github.com/PayFabric/APIs/wiki/API-Objects#card) | Card object. If you are using an existing card, you only need to specify the ID of the card. If using a new card then all fields are required. |  
+| Card*  | [Object](#card) | Card object. If you are using an existing card, you only need to specify the ID of the card. If using a new card then all fields are required. |  
 | SetupId*        | String | Gateway account profile name. This name is configurable and is defined by the client on the PayFabric web portal. |  
 | Tender*         | String | Tender type. Valid values are ``CreditCard``, ``ECheck``. |  
 | Type*           | String | Transaction type. Valid values are ``Sale``,``Book``,``Ship``,``Void``,``Credit``.  For more information on PayFabric Transaction Types, see our [guide](https://github.com/PayFabric/Portal/wiki/Transaction-Types). |  
 | BatchNumber     | String | Batch number name. For submitting multiple transactions in a single batch. |  
 | ModifiedOn      | Date| Timestamp indicating when this transaction was last modified. |  
-| Shipto   | [Object](https://github.com/PayFabric/APIs/wiki/API-Objects#address) | Address object. The required rule of address object will apply once if it is not NULL.| 
+| Shipto   | [Object](#address) | Address object. The required rule of address object will apply once if it is not NULL.| 
 | ReqAuthCode          | String | Flag indicating whether to require an authentication code. This is required for ``Force`` transactions. |
 | ReqOriginid          | String | Flag indicating whether to require Origin ID. This is required for ``Void`` and ``Ship`` transactions. |
 | ReqTrxTag            | String | Flag indicating whether to require a transaction tag. This is required by FirstData for ``Void`` and ``Ship`` transactions. |
-| TrxResponse | [Object](https://github.com/PayFabric/APIs/wiki/API-Objects#transaction-response) | Transaction response from Payment Gateway. |
-| Document | [Object](https://github.com/PayFabric/APIs/wiki/API-Objects#document) | Level 2/3 transaction fields, as well as User Defined fields. |
-| ReferenceTrxs        | Array  | Array of a [Simple Transaction Object](https://github.com/PayFabric/APIs/wiki/API-Objects#sto) which represents the original transactions. Value is Set if this transaction is a ref transaction.|
+| TrxResponse | [Object](#transaction-response) | Transaction response from Payment Gateway. |
+| Document | [Object](#document) | Level 2/3 transaction fields, as well as User Defined fields. |
+| ReferenceTrxs        | Array  | Array of a [Simple Transaction Object](#sto) which represents the original transactions. Value is Set if this transaction is a ref transaction.|
 | TrxUserDefine1       | String | User Defined field 1 |
 | TrxUserDefine2       | String | User Defined field 2 |
 | TrxUserDefine3       | String | User Defined field 3 |
