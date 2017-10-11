@@ -76,33 +76,39 @@ Catch (Exception ex)
 ```
 
 # Payment APIs
-PayFabric sends and receives payloads as structured [JSON Objects](https://github.com/PayFabric/APIs/wiki/API-Objects). 
+PayFabric sends and receives payloads as structured [JSON Objects](Sections/Objects.md). 
 Many of these objects are used in both requests and responses. Some of the objects (like Address or Cardholder) are embedded
 as child elements of other objects.
 
 ## Transactions
-* [Create a New Transaction](https://github.com/PayFabric/APIs/wiki#create-a-new-transaction)
-* [Update a Transaction](https://github.com/PayFabric/APIs/wiki#update-a-transaction)
-* [Process a Transaction by Transaction Key](https://github.com/PayFabric/APIs/wiki#process-a-transaction-by-transaction-key)
-* [Process a Transaction by Transaction Object](https://github.com/PayFabric/APIs/wiki#process-a-transaction-by-transaction-object)
-* [Retrieve a Transaction](https://github.com/PayFabric/APIs/wiki#retrieve-a-transaction)
-* [Capture a Pre-Authorized Transaction](https://github.com/PayFabric/APIs/wiki#capture-a-pre-authorized-transaction)
-* [Cancel a Transaction](https://github.com/PayFabric/APIs/wiki#cancel-a-transaction)
-* [Refund a Customer](https://github.com/PayFabric/APIs/wiki#refund-a-customer)
+* [Create a Transaction](Sections/Transactions.md#create-a-transaction)
+* [Update a Transaction](Sections/Transactions.md#update-a-transaction)
+* [Add a Payment Method](Sections/Transactions.md#add-a-payment-method)
+* [Process a Transaction](Sections/Transactions.md#process-a-transaction)
+* [Create and Process a Transaction](Sections/Transactions.md#create-and-process-a-transaciton)
+* [Retrieve a Transaction](Sections/Transactions.md#retrieve-a-transaction)
+* [Retrieve Transactions](Sections/Transactions.md#retrieve-transactions)
+* [Referenced Transaction](Sections/Transactions.md#referenced-transactions-void-capture-ship-or-credit)
+* [Refund a Customer](Sections/Transactions.md#refund-a-customer)
 
 ## Wallets / Credit Cards / Echecks
-* [Add a Card into Wallet](https://github.com/PayFabric/APIs/wiki#add-a-card-into-wallet)
-* [Update an Existing Card](https://github.com/PayFabric/APIs/wiki#update-an-existing-card)
-* [Remove a Card](https://github.com/PayFabric/APIs/wiki#remove-a-card)
-* [Retrieve Cards by Customer](https://github.com/PayFabric/APIs/wiki#retrieve-cards-by-customer)
+* [Create a Credit Card](Sections/Wallets.md#create-a-credit-card)
+* [Create an eCheck](Sections/Wallets.md#create-an-echeck)
+* [Update a Credit Card / eCheck](Sections/Wallets.md#update-a-credit-card-echeck)
+* [Retrieve a Credit Card / eCheck](Sections/Wallets.md#retrieve-a-credit-card-echeck)
+* [Retrieve Credit Cards / eChecks](Sections/Wallets.md#retrieve-credit-cards-echecks)
+* [Retrieve Credit Cards / eChecks (Query with Paging)](Sections/Wallets.md#retrieve-credit-cards-echecks-query-with-paging)
+* [Unlock Credit Card / eCheck](Sections/Wallets.md#unlock-credit-card-echeck)
+* [Remove Credit Card / eCheck](Sections/Wallets.md#Remove-credit-card-echeck)
 
 ## Payment Gateways
-* [Retrieve All Gateway Account Profiles](https://github.com/PayFabric/APIs/wiki#retrieve-all-gateway-account-profiles)
-* [Retrieve a Gateway Account Profile By Id](https://github.com/PayFabric/APIs/wiki#retrieve-a-gateway-account-profile-by-id)
+* [Retrieve a Payment Gateway Profile](Sections/PaymentGatewayProfiles.md#retrieve-a-payment-gateway-profile)
+* [Retrieve Payment Gateway Profiles](Sections/PaymentGatewayProfiles.md#retrieve-payment-gateway-profiles)
 
 ## Addresses
-* [Retrieve Shipping addresses by Customer](https://github.com/PayFabric/APIs/wiki#retrieve-shipping-addresses-by-customer)
-* [Retrieve Shipping address by Id](https://github.com/PayFabric/APIs/wiki#retrieve-shipping-address-by-id)
+* [Retrieve a Shipping address](Sections/Addresses.md#retrieve-a-shipping-address)
+* [Retrieve Shipping addresses](Sections/Addresses.md#retrieve-shipping-addresses)
+* [Retrieve Shipping addresses (Query with Paging)](Sections/Addresses.md#retrieve-shipping-addresses-query-with-paging)
 
 API Versions
 ------------
