@@ -31,7 +31,7 @@ Create a Credit Card
     "MiddleName": "",
     "SSN": ""
   },
-  <b>"Customer": "John Doe Ltd"</b>,
+  <b>"Customer": "JOHNDOE0001"</b>,
   <b>"ExpDate": "0918"</b>,
   "GPAddressCode": "",
   "GatewayToken": "",
@@ -85,7 +85,7 @@ Create an eCheck
     "MiddleName": "",
     "SSN": ""
   },
-  <b>"Customer": "John Doe Ltd"</b>,
+  <b>"Customer": "JOHNDOE0001"</b>,
   "GPAddressCode": "",
   "GatewayToken": "",
   "Identifier": "",
@@ -168,7 +168,7 @@ Credit card and account numbers are returned in a masked format. PayFabric never
   "CardName": "Visa",
   "CheckNumber": null,
   "Connector": "",
-  "Customer": "John Doe Ltd",
+  "Customer": "JOHNDOE0001",
   "ExpDate": "0918",
   "GPAddressCode": "",
   "GatewayToken": "",
@@ -192,7 +192,7 @@ Credit card and account numbers are returned in a masked format. PayFabric never
 Retrieve Credit Cards / eChecks
 -------------------------------
 
-* `GET /rest/api/wallet/get/John+Doe+Ltd?tender=CreditCard` will return the credit cards or eChecks for a customer depending on the tender type (_CreditCard_, _ECheck_)
+* `GET /rest/api/wallet/get/JOHNDOE0001?tender=CreditCard` will return the credit cards or eChecks for a customer depending on the tender type (_CreditCard_, _ECheck_)
 
 Credit card and account numbers are returned in a masked format. PayFabric never returns credit card or account numbers in plaintext.
 
@@ -227,7 +227,7 @@ Credit card and account numbers are returned in a masked format. PayFabric never
     "CardName": "Visa",
     "CheckNumber": null,
     "Connector": "",
-    "Customer": "John Doe Ltd",
+    "Customer": "JOHNDOE0001",
     "ExpDate": "0918",
     "GPAddressCode": "",
     "GatewayToken": "",
@@ -273,7 +273,7 @@ Credit card and account numbers are returned in a masked format. PayFabric never
     "CardName": "Visa",
     "CheckNumber": null,
     "Connector": "",
-    "Customer": "John Doe Ltd",
+    "Customer": "JOHNDOE0001",
     "ExpDate": "0918",
     "GPAddressCode": "",
     "GatewayToken": "",
@@ -297,7 +297,7 @@ Credit card and account numbers are returned in a masked format. PayFabric never
 Retrieve Credit Cards / eChecks (Query with Paging)
 -----------------------------------------------
 
-* `GET /rest/api/wallet/get?customer=John+Doe+Ltd&tender=CreditCard&fromdate=01-01-2015&page=1` will return the credit cards or eChecks for a customer depending on the tender type (_CreditCard_, _ECheck_) after the specified date
+* `GET /rest/api/wallet/get?customer=JOHNDOE0001&tender=CreditCard&fromdate=01-01-2015&page=1` will return the credit cards or eChecks for a customer depending on the tender type (_CreditCard_, _ECheck_) after the specified date
 
 Credit card and account numbers are returned in a masked format. PayFabric never returns credit card or account numbers in plaintext.
 
@@ -340,7 +340,7 @@ Credit card and account numbers are returned in a masked format. PayFabric never
       "CardName": "Visa",
       "CheckNumber": null,
       "Connector": "",
-      "Customer": "John Doe Ltd",
+      "Customer": "JOHNDOE0001",
       "ExpDate": "0918",
       "GPAddressCode": "",
       "GatewayToken": "",
@@ -386,7 +386,7 @@ Credit card and account numbers are returned in a masked format. PayFabric never
       "CardName": "Visa",
       "CheckNumber": null,
       "Connector": "",
-      "Customer": "John Doe Ltd",
+      "Customer": "JOHNDOE0001",
       "ExpDate": "0918",
       "GPAddressCode": "",
       "GatewayToken": "",
