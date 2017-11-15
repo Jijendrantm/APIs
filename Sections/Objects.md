@@ -43,7 +43,7 @@ The Card object represents a Credit Card or eCheck of a customer.
 | Customer*        | String | Customer ID as specified by the client upon creation of the customer. |  
 | Account*         | String | The number of the credit card, or the eCheck/ACH account. When creating a new Card this attribute must be provided by the client in plaintext. When a client retrieves a card PayFabric always returns this attribute in masked format. **When updating a card omit this field.**|  
 | ExpDate*         | String | Expiration date of the credit card in the format of MMYY. Only valid for credit cards. |  
-| CVC             | String | CVC code. Only valid for credit cards. |  
+| CVC             | String | CVC code. Only valid for credit cards. **Important**: PayFabric will NOT save this value. |  
 | StartDate       | Date   | Credit card start date. Only valid for credit cards. |  
 | CheckNumber*     | String | Check number. Only valid for eChecks. |  
 | AccountType*     | String | ACH account type. Only valid for ACH accounts. |  
