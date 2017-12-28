@@ -29,7 +29,8 @@ namespace Samples.Net40
         {
             try
             {
-                var url = "https://sandbox.payfabric.com/rest/v1/api/reference" + "/" + preAuthorizedKey + "?trxtype=Ship";
+                var url = "https://sandbox.payfabric.com/v1/rest/api/reference" + "/" + preAuthorizedKey + "?trxtype=Ship";
+                ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
                 HttpWebRequest httpWebRequest = WebRequest.Create(url) as HttpWebRequest;
                 httpWebRequest.Method = "GET";
                 httpWebRequest.ContentType = "application/json; charset=utf-8";
