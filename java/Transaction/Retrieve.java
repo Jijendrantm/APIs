@@ -26,7 +26,7 @@ public class Retrieve {
 
 		try {
 
-			String url = "https://sandbox.payfabric.com/rest/v1/api/transaction"
+			String url = "https://sandbox.payfabric.com/v1/rest/api/transaction"
 					+ "/" + transactionKey;
 			URL obj = new URL(url);
 			HttpsURLConnection con = (HttpsURLConnection) obj.openConnection();
@@ -64,7 +64,7 @@ public class Retrieve {
 			// "result" is a Transaction object with json format
 			//
 			// Go to
-			// https://github.com/PayFabric/APIs/wiki/API-Objects#transaction
+			// https://github.com/PayFabric/APIs/blob/v1/Sections/Objects.md#transaction
 			// for details
 			//
 
